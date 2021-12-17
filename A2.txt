@@ -1,0 +1,111 @@
+Multiplayer Systems Assignment 2 
+Robert Wymer 101070567
+
+Part 1: Conceptual Understanding 
+
+Q1: What is an IP Address and what is it used for?
+
+A1: Stands for internet protocol and is a unique address that identifies a device on the internet/local network.
+The protocol defines the format of how the data is sent over the internet/local network. 
+IP Addresses are expressed as a set of four numbers. Each Number can range from 0.0.0.0 to 255.255.255.255
+IP Addesses are not random. They're mathematically produced and assigned by the Internet Assigned Numbers Authority (IANA)
+Your devices IP address is assigned to by your ISP. 
+There are different types of IP addresses, these include Consumer IP, Private IP, Public IP, Dynamic IP, Static IP, Shared IP, Dedicated IP
+
+Q2: What is the difference between a local IP and a global IP?
+
+A2: Each device has two IP addresses. Local and Global.
+A global ip address is set by your ISP and can be communicated with from anywhere on the internet
+Global IPs are reassigned each time your router is reset or reconnects to the internet
+A local IP is set by your router and can only be communicated with from within your network
+
+Q3: On the computer/internet connection that you are currently using: What is your local and global IP
+Global: 192.168.86.1
+Local:  192.168.86.89
+
+Q4: What is the difference between a dynamic IP and a static IP?
+
+A4: Public IP addresses can be either dynamic or static. 
+Dynamic IP addresses change automatically and regularly. 
+ISPs will buy a large pool of IP adresses and then assign and reassign them automatically to their customers.
+This has many benefits such as cost savings and making it harder to hack into customers network iterfaces
+Static adresses remain consistent. These are mainly used by businesses that plan to host their own servers.
+Static IPs ensures websites and emails will always have a consistent IP address
+
+Q5: What is port forwarding?
+
+A5:Port Forwarding is a an application that redirects a communication request from one address and port number to another.
+It's most commonly used to make services on a host residing on a protected(internal) network available to hosts on the opposite side of the gateway.
+This allows remote devices to connect to a specific computer or service within a private local-area network (LAN)
+
+Q6: What is a Socket?
+
+A6: A socket consists of the IP Address of a system and the port number within the system. The IP address corresponds 
+to the system and the port number corresponds to the program where the data needs to be sent. Two processes that are running 
+on a computer or two different systmes can communicate via a socket. It works as a inter-process communicator and can be seen 
+as the endpoint of the process communication
+
+
+Q7: What is the difference between a socket and a port?
+
+A7: A port is a logical identifier assigned to a process in order to identify that process uniquely in a network system.
+Ports 
+- Specifies a number that is used by a program in a computer 
+- A program running on different computers can use the same port number. Port numbers can't be used to identify a computer uniquely 
+- Port number is used in the transport layer 
+Port uses a socket to drop the data to a correct application
+
+Sockets 
+- A socket is a combination of IP address and a port number
+- It identifies a computer as well as a program within the computer uniquely 
+- Sockets are involved in the application layer. A socket is an interface between the transport and application layer 
+- A server and a client uses a socket to keep an eye on the data request responses 
+
+Q8: Investigate the commonly used port numbers. How might you select relatively unused port number?
+
+A8: A common way to select an unused port is to bind to port 0, which will ask kernel to choose a port from its local port range. 
+Kernel wont reuse a port until it absolutely has to so in most cases. The port will be new and different.
+
+Q9: What is the OSI model?
+
+A9: The OSI Model stands for Open Systems Interconnection Model and is a conceptual framework used to describe the functions of a networking system. It characterizes computing functions 
+into a universal set of rules and requirements in order to support interoperability between different products and software.
+These functions are split into different abstraction layers, Physical, Data Link, Network, Transport, Session, Presentation and Application   
+The OSI model was created in the early days of network computing and although it does not always map directly to specific systems today, the OSI model is still used to describe the Network Artitechture 
+
+Q10: Wherein the OSI model do you suppose that us game developers will be working?
+
+A10: Application, Presentation and Session Layer
+
+Q11: What is TCP?
+
+A11:TCP stands for Transmission Control Protocol, which is a communcation standard that enables application programs and computing devices to exchange messages over a network. It is designed to send packets 
+across the internet and ensure the successful delivery of data and messsages over networks. TCP is one of the basic standards that define the rules of the internet. It is one of the most commonly used protocols
+within digital network communciations and ensures end to end data delivery
+TCP organizes data so that it can be transmitted between a server and a client and guarantees that integrity of the data being communciated over a network. 
+One of the core members of the internet protocol suite
+
+
+Q12: What is UDP?
+
+A12: UDP is the User Datagram Protocol and is also one of the core members of the internet protocol suite. With UDP, computers applications can send messages, called datagrams, to other hosts on an internet protocol network. UDP uses simple 
+connectionless communication model with a minimum of protocol mechanisms and also provides checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram.
+UDP provides no guarantess to the upper layer protocol for message delivery and the UDP layer retains no state of UDP messages once sent. 
+
+
+Q13: When is TCP best used?
+
+A13: TCP is best used where realiability is more important. Examples being File transfers, emails, and web browsing. Because of TCPs realability, there are many overheads and this causes increased packet size and makes the speed slower
+than UDP. An acknowledgement is also sent by the recipient 
+
+Q14: When is UDP best used?
+
+A14: UDP is ideal when error checking and correction are unnessecary or done by the application. Time sensitive applications often use UDP because dropping packets is preferable to waiting for packets delayed due to retransmission. 
+A number of UDP's attributes also make it suited for specific applications such as...
+Transaction Oriented - suitable for simple query response protocols 
+Provides Datagrams - suitable for modelling other protocols 
+Its simple - Suitable for bootstrapping or other purposes without a full stack protocol 
+Its Stateless - Suitable for very large number of clients 
+Lack of Retransmission delay - Suitable for real-time applications 
+Essentially where speed is the priority - Mainly live video streaming and gaming
+
